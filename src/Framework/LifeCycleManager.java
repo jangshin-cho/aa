@@ -17,11 +17,8 @@ public class LifeCycleManager {
             CommonFilter filter4 = new AddFilter();
             
             filter1.connectOutputTo(filter3);
-            //filter3.connectOutputTo(filter2);
-            
-            
             filter3.connectOutputTo(filter4);
-            //filter4.connectOutputTo(filter2);
+            filter4.connectOutputTo(filter2);
             
             
             Thread thread1 = new Thread(filter1);
